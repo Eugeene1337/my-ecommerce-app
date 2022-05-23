@@ -1,4 +1,4 @@
-# "CoolApe" - Aplikacja webowa typu "E-Commerce"
+# CoolApe - Aplikacja webowa typu "E-Commerce"
 
 Aplikacja zaimplemntowana w oparciu o framework Django
 
@@ -11,11 +11,12 @@ Aplikacja zaimplemntowana w oparciu o framework Django
 1. Logowanie / Rejestracja użytkownikow
 2. Panel administracyjny
 3. Prezentacja artykułów na stronie głównej
-4. Wyszukiwanie artykułow po nazwie oraz możliwość filtowania artykułów
+4. Wyszukiwanie artykułow po nazwie oraz możliwość filtowania artykułów po kategorii
 4. Możliwość dodania do / usunięcia z koszyka wybranych artykułów
 5. Obsługa płatności za pomocą Stripe
 6. Pobranie od użytkownika adresu dostawy
 7. Mozliwość aktywacji kodu rabatowego
+8. Możliwość zwrotu pieniędzy
 
 ## Wykożystane materiały
 
