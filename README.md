@@ -3,7 +3,7 @@
 Aplikacja zaimplemntowana w oparciu o framework Django
 
 <p align="center">
-  <a><img src="https://github.com/eugeene1337/my-ecommerce-app/blob/master/application.png" width="290"></a>
+  <a><img src="https://github.com/eugeene1337/my-ecommerce-app/blob/master/application.png" width="1900"></a>
 </p>
 
 ## Funkcjonalności
