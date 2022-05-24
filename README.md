@@ -22,4 +22,4 @@ Aplikacja zaimplemntowana w oparciu o framework Django
 
 - [Django Project Boilerplate](https://github.com/justdjango/django_project_boilerplate)
 - [Ecommerce Template – Bootstrap 4 & Material Design](https://mdbootstrap.com/freebies/jquery/e-commerce/)
-- [Stripe](https://stripe.com/)
+- [Stripe Documentation](https://stripe.com/docs)
