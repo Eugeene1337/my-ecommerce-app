@@ -4,7 +4,7 @@ from .views import (
     ItemDetailView,
     OrderSummaryView,
     add_to_cart,
-    add_coupon,
+    AddCouponView,
     remove_from_cart,
     remove_single_item_from_cart,
     CheckoutView,
@@ -23,5 +23,5 @@ urlpatterns = [
     path('remove-item-from-cart/<slug>/', remove_single_item_from_cart,
          name='remove-single-item-from-cart'),
     path('payment/<payment_option>/', PaymentView.as_view(), name='payment'),
-    path('add-coupon', add_coupon, name='add-coupon'),
+    path('add-coupon/', AddCouponView.as_view(), name='add-coupon'),
 ]

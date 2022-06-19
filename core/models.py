@@ -159,9 +159,6 @@ class Coupon(models.Model):
     def __str__(self):
         return self.code
 
-    def __str__(self):
-        return self.code
-
 
 def userprofile_receiver(sender, instance, created, *args, **kwargs):
     if created:
