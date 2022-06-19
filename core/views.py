@@ -1,3 +1,6 @@
+import random
+import string
+
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, DetailView, View
 from .models import Item, OrderItem, Order, Address, Payment, UserProfile
@@ -13,9 +16,13 @@ import stripe
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+def create_ref_code():
+    return ''.join(random.choices(string.ascii_lowercase + string.digits, k=20))
+
+
 class HomeView(ListView):
     model = Item
-    paginate_by = 10
+    paginate_by = 8
     template_name = "home.html"
 
 
@@ -46,7 +53,7 @@ class CheckoutView(View):
                 'form': form,
                 'couponform': CouponForm(),
                 'order': order,
-                # 'DISPLAY_COUPON_FORM': True
+                'DISPLAY_COUPON_FORM': True
             }
 
             shipping_address_qs = Address.objects.filter(
@@ -294,7 +301,7 @@ class PaymentView(View):
 
                 order.ordered = True
                 order.payment = payment
-                # order.ref_code = create_ref_code()
+                order.ref_code = create_ref_code()
                 order.save()
 
                 messages.success(self.request, "Your order was successful!")
@@ -432,6 +439,10 @@ def remove_single_item_from_cart(request, slug):
     else:
         messages.info(request, "You do not have an active order")
         return redirect("core:product", slug=slug)
+
+
+def add_coupon(request):
+    return redirect("core:order-summary")
 
 
 def is_valid_form(values):

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block extra_head %}
 <style>
@@ -171,7 +171,7 @@ button:hover {
 
 <script src="https://js.stripe.com/v3/"></script>
 <script nonce="">  // Create a Stripe client.
-  var stripe = Stripe('{{STRIPE_PUBLIC_KEY}}');
+  var stripe = Stripe('pk_test_51L2HdpFS2k5invakh6NtyqJDSOww9vgpOp7evTc4XdThGlsxJLuTQApgJIw90494zXnWONFSEmv51lRl1hersTF100WYSs1EMR');
 
   // Create an instance of Elements.
   var elements = stripe.elements();
